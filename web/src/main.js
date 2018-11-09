@@ -15,6 +15,10 @@ import vueHeadful from 'vue-headful';
 import Home from './components/Home';
 import UsersList from './components/UsersList';
 
+const SplitTest = () => import(
+  /* webpackChunkName: "SplitTest" */ './components/SplitTest'
+);
+
 // init router
 Vue.use(VueRouter);
 
@@ -22,7 +26,8 @@ export const router = new VueRouter({
   mode: 'history',
   routes: [
     { path: '/', component: Home },
-    { path: '/users-list', component: UsersList }
+    { path: '/users-list', component: UsersList },
+    { path: '/split-test', component: SplitTest }
   ]
 });
 

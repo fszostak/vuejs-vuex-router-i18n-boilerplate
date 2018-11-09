@@ -4,14 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "json-server -p 3080 --watch data.json",
+    "start": "json-server -p 3080 --watch data.json --host 0.0.0.0",
     "generate": "json-server generate.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "json-server": "^0.9.4",
     "faker": "^4.1.0",
+    "json-server": "^0.14.0",
     "lodash": "^4.17.11"
   }
 }

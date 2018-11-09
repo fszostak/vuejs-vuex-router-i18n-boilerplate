@@ -13,7 +13,7 @@ const getters = {
 
 const actions = {
   async changeCulture ({ commit, rootState }, event) {
-    const locale = event.target.value;
+    let locale = (typeof event === 'string' ? event : event.target.value);
     commit('CHANGE', locale);
     rootState.i18n.locale = locale;
   }
