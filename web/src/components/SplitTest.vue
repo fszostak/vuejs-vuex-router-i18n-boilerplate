@@ -1,12 +1,13 @@
 <template>
   <div>
-    <splitted-component v-if="show"></splitted-component>
+    <SplittedComponent v-if="show"></SplittedComponent>
 
     <select class="ui search dropdown" @change="changeSwitch">
       <option>Off</option>
       <option>On</option>
     </select>
 
+    {{ status }}
   </div>
 </template>
 
@@ -20,6 +21,11 @@
     data() {
       return {
         show: false
+      }
+    },
+    computed: {
+      status() {
+        return (this.show ? "Active" : "Inactive" );
       }
     },
     methods: {
