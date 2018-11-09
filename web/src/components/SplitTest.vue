@@ -1,6 +1,6 @@
 <template>
   <div>
-    <SplittedComponent v-if="show" :show="show"></SplittedComponent>
+    <splitted-component v-if="show"></splitted-component>
 
     <select class="ui search dropdown" @change="changeSwitch">
       <option>Off</option>
